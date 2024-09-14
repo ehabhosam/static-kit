@@ -25,8 +25,7 @@ StaticKit is a powerful, lightweight starter kit for building static websites us
 1. Clone the repository:
 
    ```
-   git clone https://github.com/yourusername/static-kit.git
-   cd static-kit
+   git clone https://github.com/ehabhosam/static-kit
    ```
 
 2. Install dependencies:
