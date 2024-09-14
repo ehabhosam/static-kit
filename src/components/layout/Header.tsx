@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { useStaticRoutes } from "../../hooks/useStaticRoutes";
 
 const Header = () => {
+  const routes = useStaticRoutes();
+  const paths = routes.map((route) => route.path).reverse();
+
   return (
     <header className="bg-white shadow-md">
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
@@ -9,21 +13,16 @@ const Header = () => {
         </Link>
         <nav>
           <ul className="flex space-x-4">
-            <li>
-              <Link to="/" className="text-gray-600 hover:text-gray-800">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="text-gray-600 hover:text-gray-800">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="text-gray-600 hover:text-gray-800">
-                Contact
-              </Link>
-            </li>
+            {paths.map((path, index) => (
+              <li key={index}>
+                <Link to={path} className="text-gray-600 hover:text-gray-800">
+                  {path === "/"
+                    ? "Home"
+                    : path.replace("/", "").charAt(0).toUpperCase() +
+                      path.replace("/", "").slice(1)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

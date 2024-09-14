@@ -11,26 +11,6 @@ const Footer = () => {
               Short description about your company or website.
             </p>
           </div>
-          <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
-            <ul className="text-gray-600">
-              <li>
-                <a href="/" className="hover:text-gray-800">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="hover:text-gray-800">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="hover:text-gray-800">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
           <div className="w-full md:w-1/3">
             <h3 className="text-lg font-semibold mb-2">Connect With Us</h3>
             <p className="text-gray-600">Follow us on social media:</p>
