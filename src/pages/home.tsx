@@ -1,18 +1,23 @@
-export default function HomePage() {
+import React from "react";
+
+const HomePage: React.FC = () => {
   return (
-    <div className="bg-white min-h-screen flex items-center justify-center">
+    <div className="bg-primary-50 min-h-screen flex items-center justify-center">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-800">
+        <h1 className="text-4xl font-bold text-primary-800">
           Your StaticKit is all set! 🚀
         </h1>
-        <p className="text-gray-600 mt-4">
-          Add/Modify pages at <code className="bg-gray-50 p-1">src/pages</code>
+        <p className="text-primary-600 mt-4">
+          Add/Modify pages at{" "}
+          <code className="bg-primary-100 p-1 rounded">src/pages</code>
         </p>
-        <p className="text-gray-600 mt-4">
-          Add/Modify components{" "}
-          <code className="bg-gray-50 p-1">src/components</code>
+        <p className="text-primary-600 mt-4">
+          Add/Modify components at{" "}
+          <code className="bg-primary-100 p-1 rounded">src/components</code>
         </p>
       </div>
     </div>
   );
-}
+};
+
+export default HomePage;
